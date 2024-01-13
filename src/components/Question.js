@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Question.css'
 
 const Question = ({ id, _question, _answer, onDelete, onChange, onMoveUp, onMoveDown, totalCount }) => {
 
   const [question, setQuestion] = useState(_question);
   const [answer, setAnswer] = useState(_answer);
+
+  useEffect(() => {
+    setQuestion(_question)
+    setAnswer(_answer)
+  }, [_question, _answer])
 
   const handleQuestionChange = (e) => {
     setQuestion(e.target.value);

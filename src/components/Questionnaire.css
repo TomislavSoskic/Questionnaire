@@ -28,6 +28,15 @@
     font-size: 22px;
     font-weight: 700;
   }
+
+  .navbar-center input {
+    background-color: var(--fueled-red);
+    color: var(--fueled-white);
+    border: none;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+  }
   
   .navbar-right button {
     background: rgba(245, 245, 241, 0.3);
@@ -64,8 +73,13 @@
   .btn-red {
     height: 40px;
     width: 100%;
-    font-size: 12px;
     background-color: var(--fueled-red);
     color: var(--fueled-white);
     border: 1px solid rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 768px) {
+    .content, .btns {
+        width: 90%;
+    }
   }

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Question from './Question';
 import './Questionnaire.css'
-import { queries } from '@testing-library/react';
 
 const Questionnaire = () => {
   const [questions, setQuestions] = useState([])
+  const [title, setTitle] = useState("Questionns")
 
   useEffect(() => {
     const _questions = JSON.parse(localStorage.getItem("Questionnaire"))  
@@ -41,6 +41,10 @@ const Questionnaire = () => {
       )
     );
   };
+
+  const handleTitleChange = (e) => {
+
+  }
 
   const handleMoveUp = (index) => {
     if (index > 0) {
@@ -83,7 +87,7 @@ const Questionnaire = () => {
           </svg>
         </div>
         <div className="navbar-center">
-          <p>Questions about Latin</p>
+          <input type="text" value={title} onChange={(e) => {setTitle(e.target.value)}}/>
         </div>
         <div className="navbar-right">
           <button>LOG IN</button>
