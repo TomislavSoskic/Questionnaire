@@ -45,6 +45,9 @@ const Question = ({ id, _question, _answer, onDelete, onChange, onMoveUp, onMove
           <label>Answer</label>
           <select className="question-dropdown">
             <option>Short Answer</option>
+            <option>Paragraph</option>
+            <option>Checkboxes</option>
+            <option>Multiple Choise</option>
           </select>
           <input className="input-base" type="text" placeholder="Short answer text" value={_answer} onChange={handleAnswerChange} />
         </div>

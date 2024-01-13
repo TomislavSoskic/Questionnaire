@@ -4,7 +4,7 @@ import './Questionnaire.css'
 
 const Questionnaire = () => {
   const [questions, setQuestions] = useState([])
-  const [title, setTitle] = useState("Questionns")
+  const [title, setTitle] = useState("New Questionnaire")
 
   useEffect(() => {
     const _questions = JSON.parse(localStorage.getItem("Questionnaire"))  

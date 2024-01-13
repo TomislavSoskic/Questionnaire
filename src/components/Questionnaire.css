@@ -70,12 +70,22 @@
     border: 1px solid rgba(0,0,0,0.1);
   }
 
+  .btn-white:hover {
+    background-color: rgb(230,230,230);
+    cursor: pointer;
+  }
+
   .btn-red {
     height: 40px;
     width: 100%;
     background-color: var(--fueled-red);
     color: var(--fueled-white);
     border: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .btn-red:hover {
+    background-color: #8E0000;
+    cursor: pointer;
   }
 
   @media (max-width: 768px) {
